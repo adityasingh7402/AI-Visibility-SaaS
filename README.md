@@ -1,46 +1,71 @@
 # AI Visibility SaaS
 
-> **Track and improve your brand's share-of-voice across every major AI-powered search engine and LLM response surface.**
+> **Track and improve your brand's presence across AI-powered search engines and LLM responses.**
 
-AI Visibility SaaS enables marketing and SEO teams to monitor how often—and how favourably—their brand appears when users ask ChatGPT, Gemini, and Perplexity industry questions. The platform runs structured prompt experiments, scores brand citations against competitors, surfaces gap analyses, and delivers actionable recommendations to improve AI Share-of-Voice (SOV). Today the MVP is **live**: keyword management, automated prompt sampling, multi-model result capture, and a real-time dashboard are all shipped.
+AI Visibility SaaS is a multi-tenant platform that lets marketing teams, SEO professionals, and brand managers measure how often — and how positively — their brand appears when real users ask AI assistants (ChatGPT, Gemini, Perplexity) questions in their category. The platform runs structured prompt campaigns, scores each response for brand mention, sentiment, and citation quality, surfaces gap analyses against top competitors, and surfaces actionable recommendations to improve Share-of-Voice (SOV) inside generative AI responses.
+
+## Who It's For
+
+| Persona | Pain Point Solved |
+|---|---|
+| Brand / Growth Marketers | "Are we even showing up in AI answers for our category?" |
+| SEO / GEO Specialists | "How do we optimise content to get cited by LLMs?" |
+| Product & Strategy | "Which competitor is winning the AI channel, and why?" |
+| Agency Clients | "Show me a dashboard I can share with my CMO." |
+
+## What's Shipped (MVP)
+
+- ✅ Keyword → prompt campaign runner (ChatGPT, Gemini, Perplexity)
+- ✅ Brand mention detection + sentiment scorer (Python service)
+- ✅ Share-of-Voice (SOV) and Top-1 ranking metrics
+- ✅ Gap analyzer comparing brand vs. competitor citation patterns
+- ✅ Run history storage (Postgres) with per-run drill-down UI
+- ✅ Next.js dashboard with auth (JWT) and multi-tenant workspace isolation
+- ✅ REST API for all core operations
 
 ## Quick Links
 
-| Document | Purpose |
+| Doc | Description |
 |---|---|
-| [PRD.md](./PRD.md) | Problem, target users, MVP scope, success metrics, milestones |
+| [PRD.md](./PRD.md) | Problem, MVP scope, success metrics, milestones |
 | [ARCHITECTURE.md](./ARCHITECTURE.md) | System diagram, service responsibilities, data flow |
 | [API_CONTRACTS.md](./API_CONTRACTS.md) | Request/response schemas, error codes, versioning |
-| [DATA_MODEL.md](./DATA_MODEL.md) | Database tables/collections, entity definitions |
-| [PROMPTING_EVALS.md](./PROMPTING_EVALS.md) | Prompt variant strategy, sampling, drift checks |
-| [MODEL_PROVIDER_NOTES.md](./MODEL_PROVIDER_NOTES.md) | Per-provider capabilities, costs, quirks |
-| [SECURITY_PRIVACY_COMPLIANCE.md](./SECURITY_PRIVACY_COMPLIANCE.md) | Data retention, PII, tenant isolation, ToS |
+| [DATA_MODEL.md](./DATA_MODEL.md) | Database entities and schema |
+| [PROMPTING_EVALS.md](./PROMPTING_EVALS.md) | Prompt strategy, sampling, evaluation |
+| [MODEL_PROVIDER_NOTES.md](./MODEL_PROVIDER_NOTES.md) | Per-provider quirks, costs, rate limits |
+| [SECURITY_PRIVACY_COMPLIANCE.md](./SECURITY_PRIVACY_COMPLIANCE.md) | Data retention, PII, tenant isolation |
 | [OPS_RUNBOOK.md](./OPS_RUNBOOK.md) | Deployment, env vars, monitoring, incident response |
 | [DECISIONS.md](./DECISIONS.md) | Architecture Decision Records (ADR-lite) |
 
-## Tech Stack
+## Tech Stack (TL;DR)
 
-- **Frontend**: Next.js 14 (App Router)
-- **Backend / API / Auth / Jobs**: Node.js (Express + BullMQ)
-- **AI / Scoring / Extraction**: Python (FastAPI)
-- **Database**: PostgreSQL (primary) + pgvector
-- **Queue**: Redis
-- **Providers**: OpenAI (ChatGPT), Google (Gemini), Perplexity
+```
+Next.js (UI)  →  Node.js API/Orchestration  →  Python LLM Service (Pawan)
+                        ↓
+                   Postgres (primary storage)
+```
 
 ## Getting Started
 
 ```bash
-# Clone the repo
+# Clone
 git clone https://github.com/adityasingh7402/AI-Visibility-SaaS.git
 cd AI-Visibility-SaaS
 
-# See the runbook for full setup
-cat OPS_RUNBOOK.md
+# Install all services
+cd apps/web && npm install
+cd ../api && npm install
+cd ../../services/python && pip install -r requirements.txt
+
+# Copy env files
+cp .env.example .env
+
+# Run (dev)
+docker-compose up
 ```
 
-## Contributing
-
-Please read through the PRD and ARCHITECTURE docs before opening a PR. All significant decisions should be logged in DECISIONS.md.
+See [OPS_RUNBOOK.md](./OPS_RUNBOOK.md) for full environment variable reference and production deployment steps.
 
 ---
-*Last updated: February 2026*
+
+*Last updated: 2026-02-27*
