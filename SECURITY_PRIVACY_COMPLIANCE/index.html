@@ -1,0 +1,1712 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for AI Visibility SaaS — track and improve your brand's presence across AI-powered search engines and LLM responses.">
+      
+      
+        <meta name="author" content="Aditya Singh">
+      
+      
+        <link rel="canonical" href="https://adityasingh7402.github.io/AI-Visibility-SaaS/SECURITY_PRIVACY_COMPLIANCE/">
+      
+      
+        <link rel="prev" href="../MODEL_PROVIDER_NOTES/">
+      
+      
+        <link rel="next" href="../OPS_RUNBOOK/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Security & Compliance - AI Visibility SaaS — Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#security-privacy-compliance-ai-visibility-saas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AI Visibility SaaS — Docs" class="md-header__button md-logo" aria-label="AI Visibility SaaS — Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Visibility SaaS — Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Security & Compliance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/adityasingh7402/AI-Visibility-SaaS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adityasingh7402/AI-Visibility-SaaS
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../PRD/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Product (PRD)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ARCHITECTURE/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../API_CONTRACTS/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Contracts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../DATA_MODEL/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Data Model
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../PROMPTING_EVALS/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Prompting & Evals
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../MODEL_PROVIDER_NOTES/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Model Provider Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Security & Compliance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../OPS_RUNBOOK/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ops Runbook
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../DECISIONS/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Decisions (ADRs)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../CONTRIBUTORS/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Team & Contributors
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AI Visibility SaaS — Docs" class="md-nav__button md-logo" aria-label="AI Visibility SaaS — Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI Visibility SaaS — Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/adityasingh7402/AI-Visibility-SaaS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adityasingh7402/AI-Visibility-SaaS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PRD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product (PRD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API_CONTRACTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DATA_MODEL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROMPTING_EVALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompting & Evals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MODEL_PROVIDER_NOTES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Provider Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security & Compliance
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security & Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-data-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Data Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tenant-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tenant Isolation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tenant Isolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-database-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Database Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-file-storage-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 File Storage Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-api-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 API Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-authentication-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Authentication &amp; Authorization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Authentication &amp; Authorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-jwt-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 JWT Tokens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-role-based-access-control-rbac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Role-Based Access Control (RBAC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-api-key-access-post-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 API Key Access (Post-MVP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pii-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. PII Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. PII Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-what-is-pii-in-this-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 What is PII in this system?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-logging-redaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Logging Redaction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Retention
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Data Retention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-account-deletion-right-to-erasure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Account Deletion (Right to Erasure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-secrets-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Secrets Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-web-crawling-robotstxt-tos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Web Crawling, Robots.txt &amp; ToS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Web Crawling, Robots.txt &amp; ToS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm-provider-tos-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM Provider ToS Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-infrastructure-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Infrastructure Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-incident-response-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Incident Response (Security)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OPS_RUNBOOK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ops Runbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DECISIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisions (ADRs)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team & Contributors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-data-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Data Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tenant-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tenant Isolation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tenant Isolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-database-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Database Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-file-storage-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 File Storage Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-api-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 API Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-authentication-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Authentication &amp; Authorization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Authentication &amp; Authorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-jwt-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 JWT Tokens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-role-based-access-control-rbac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Role-Based Access Control (RBAC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-api-key-access-post-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 API Key Access (Post-MVP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pii-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. PII Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. PII Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-what-is-pii-in-this-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 What is PII in this system?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-logging-redaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Logging Redaction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Retention
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Data Retention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-account-deletion-right-to-erasure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Account Deletion (Right to Erasure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-secrets-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Secrets Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-web-crawling-robotstxt-tos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Web Crawling, Robots.txt &amp; ToS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Web Crawling, Robots.txt &amp; ToS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm-provider-tos-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM Provider ToS Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-infrastructure-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Infrastructure Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-incident-response-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Incident Response (Security)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="security-privacy-compliance-ai-visibility-saas">SECURITY, PRIVACY &amp; COMPLIANCE — AI Visibility SaaS<a class="headerlink" href="#security-privacy-compliance-ai-visibility-saas" title="Permanent link">&para;</a></h1>
+<p><strong>Last Updated:</strong> 2026-02-27<br />
+<strong>Owner:</strong> Aditya Singh<br />
+<strong>Review Cadence:</strong> Quarterly</p>
+<hr />
+<h2 id="1-data-classification">1. Data Classification<a class="headerlink" href="#1-data-classification" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Examples</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Public</strong></td>
+<td>Product docs, public API contracts</td>
+<td>Anyone</td>
+</tr>
+<tr>
+<td><strong>Internal</strong></td>
+<td>Source code, architecture docs</td>
+<td>Team only</td>
+</tr>
+<tr>
+<td><strong>Confidential</strong></td>
+<td>Customer keyword lists, run results, brand dictionaries</td>
+<td>Per-workspace with auth</td>
+</tr>
+<tr>
+<td><strong>Restricted</strong></td>
+<td>API keys, secrets, user credentials</td>
+<td>Secrets manager only, never logged</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-tenant-isolation">2. Tenant Isolation<a class="headerlink" href="#2-tenant-isolation" title="Permanent link">&para;</a></h2>
+<p>All customer data is isolated at the <strong>workspace level</strong>.</p>
+<h3 id="21-database-isolation">2.1 Database Isolation<a class="headerlink" href="#21-database-isolation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Every Postgres table that holds customer data has a <code>workspace_id</code> column.</li>
+<li><strong>All queries</strong> — including via ORM and raw SQL — are filtered by <code>workspace_id</code> extracted from the validated JWT.</li>
+<li>Prisma middleware enforces <code>workspace_id</code> injection automatically:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// middleware/tenantScope.ts</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">prisma</span><span class="p">.</span><span class="nx">$use</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">params</span><span class="p">,</span><span class="w"> </span><span class="nx">next</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">workspaceId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getWorkspaceIdFromContext</span><span class="p">();</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">model</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">TENANT_MODELS</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">model</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">params</span><span class="p">.</span><span class="nx">args</span><span class="p">.</span><span class="nx">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">params</span><span class="p">.</span><span class="nx">args</span><span class="p">.</span><span class="nx">where</span><span class="p">,</span><span class="w"> </span><span class="nx">workspaceId</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">next</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>Workspace ID is <strong>never</strong> taken from the request body — only from the validated JWT claim.</li>
+</ul>
+<h3 id="22-file-storage-isolation">2.2 File Storage Isolation<a class="headerlink" href="#22-file-storage-isolation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>S3/R2 raw response blobs are stored under <code>/{workspace_id}/{run_id}/...</code>.</li>
+<li>Pre-signed URLs scoped to the workspace prefix only.</li>
+<li>No cross-workspace URL access permitted.</li>
+</ul>
+<h3 id="23-api-isolation">2.3 API Isolation<a class="headerlink" href="#23-api-isolation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Workspace-scoped resources (runs, keywords, etc.) return <code>404 NOT_FOUND</code> — <strong>not</strong> <code>403 FORBIDDEN</code> — when accessed by a token from a different workspace, to avoid enumeration.</li>
+</ul>
+<hr />
+<h2 id="3-authentication-authorization">3. Authentication &amp; Authorization<a class="headerlink" href="#3-authentication-authorization" title="Permanent link">&para;</a></h2>
+<h3 id="31-jwt-tokens">3.1 JWT Tokens<a class="headerlink" href="#31-jwt-tokens" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Signed with RS256 (asymmetric key pair)</li>
+<li>Claims: <code>sub</code> (user_id), <code>workspace_id</code>, <code>role</code>, <code>exp</code> (1h access token), <code>iat</code></li>
+<li>Refresh tokens: 30-day sliding expiry, stored as httpOnly cookie (encrypted)</li>
+<li>Token rotation on refresh; previous refresh token invalidated immediately (single-use)</li>
+</ul>
+<h3 id="32-role-based-access-control-rbac">3.2 Role-Based Access Control (RBAC)<a class="headerlink" href="#32-role-based-access-control-rbac" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Can Read</th>
+<th>Can Write</th>
+<th>Can Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>viewer</code></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>editor</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>admin</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅ (workspace)</td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅ (billing too)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-api-key-access-post-mvp">3.3 API Key Access (Post-MVP)<a class="headerlink" href="#33-api-key-access-post-mvp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Long-lived API keys for programmatic access; stored as hashed (bcrypt) values.</li>
+<li>Keys scoped to workspace with configurable role cap.</li>
+<li>Rate-limited per key.</li>
+</ul>
+<hr />
+<h2 id="4-pii-handling">4. PII Handling<a class="headerlink" href="#4-pii-handling" title="Permanent link">&para;</a></h2>
+<h3 id="41-what-is-pii-in-this-system">4.1 What is PII in this system?<a class="headerlink" href="#41-what-is-pii-in-this-system" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>PII Risk</th>
+<th>Handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User email</td>
+<td>Medium</td>
+<td>Encrypted at rest (AES-256 via Supabase)</td>
+</tr>
+<tr>
+<td>User name</td>
+<td>Low</td>
+<td>Encrypted at rest</td>
+</tr>
+<tr>
+<td>LLM prompt text</td>
+<td>Low-Medium</td>
+<td>May contain brand/competitor info; treated as confidential</td>
+</tr>
+<tr>
+<td>LLM response text</td>
+<td>Low</td>
+<td>Treated as confidential (workspace data)</td>
+</tr>
+<tr>
+<td>IP address</td>
+<td>Medium</td>
+<td>Logged for fraud detection only; not attached to run results</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-logging-redaction">4.2 Logging Redaction<a class="headerlink" href="#42-logging-redaction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>User emails and workspace names are <strong>never</strong> logged in plain text in application logs.</li>
+<li>JWT tokens are redacted in log lines (replaced with <code>[JWT_REDACTED]</code>).</li>
+<li>API keys redacted as <code>[APIKEY_REDACTED]</code>.</li>
+<li>Logs are structured JSON (no free-text interpolation that could accidentally include secrets).</li>
+</ul>
+<hr />
+<h2 id="5-data-retention">5. Data Retention<a class="headerlink" href="#5-data-retention" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Retention</th>
+<th>Deletion Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User accounts</td>
+<td>Until account deletion request + 30 days</td>
+<td>Soft delete → hard delete at 30d</td>
+</tr>
+<tr>
+<td>Workspace run results (Postgres)</td>
+<td>2 years</td>
+<td>Automated TTL job</td>
+</tr>
+<tr>
+<td>Raw response blobs (S3/R2)</td>
+<td>90 days active, then archive tier</td>
+<td>Lifecycle policy</td>
+</tr>
+<tr>
+<td>Raw fragments (MongoDB)</td>
+<td>90 days</td>
+<td>TTL index on <code>created_at</code></td>
+</tr>
+<tr>
+<td>Audit logs</td>
+<td>3 years</td>
+<td>Cold storage after 1 year</td>
+</tr>
+<tr>
+<td>Billing records</td>
+<td>7 years (legal)</td>
+<td>Immutable cold storage</td>
+</tr>
+</tbody>
+</table>
+<h3 id="51-account-deletion-right-to-erasure">5.1 Account Deletion (Right to Erasure)<a class="headerlink" href="#51-account-deletion-right-to-erasure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>On workspace deletion: all runs, keywords, model results, and user records are hard-deleted within 7 days.</li>
+<li>S3/R2 blobs deleted within 24 hours via deletion job.</li>
+<li>Email deletion confirmation sent to workspace owner.</li>
+</ul>
+<hr />
+<h2 id="6-secrets-management">6. Secrets Management<a class="headerlink" href="#6-secrets-management" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All secrets (API keys, DB URLs, signing keys) stored in environment variables.</li>
+<li><strong>Never</strong> commit secrets to Git — <code>.env</code> is in <code>.gitignore</code>; CI uses vault/secrets manager.</li>
+<li>Recommended: <strong>Doppler</strong> or <strong>AWS Secrets Manager</strong> for production.</li>
+<li>Rotate all LLM provider API keys quarterly or on suspected exposure.</li>
+<li>Principle of least privilege: each service only receives the secrets it needs.</li>
+</ul>
+<hr />
+<h2 id="7-web-crawling-robotstxt-tos">7. Web Crawling, Robots.txt &amp; ToS<a class="headerlink" href="#7-web-crawling-robotstxt-tos" title="Permanent link">&para;</a></h2>
+<p>The platform does <strong>not</strong> crawl or scrape websites as part of its core function — it calls official LLM provider APIs only. However, for citation analysis (URLs returned by Perplexity):</p>
+<ul>
+<li>We store the <strong>URL and title</strong> returned by the provider — we do <strong>not</strong> fetch or scrape the linked page.</li>
+<li>Downstream content analysis from cited URLs would require: robots.txt compliance, rate limiting, and ToS review per target domain.</li>
+<li><strong>Current MVP stance:</strong> citation URLs stored as-is; no crawling.</li>
+</ul>
+<h3 id="llm-provider-tos-compliance">LLM Provider ToS Compliance<a class="headerlink" href="#llm-provider-tos-compliance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Key Restriction</th>
+<th>Our Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAI</td>
+<td>No training data extraction</td>
+<td>✅ Compliant — we score responses, don't extract training data</td>
+</tr>
+<tr>
+<td>Google</td>
+<td>No prompt injection to circumvent filters</td>
+<td>✅ Compliant</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>API use only (no scraping their web UI)</td>
+<td>✅ Compliant</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-infrastructure-security">8. Infrastructure Security<a class="headerlink" href="#8-infrastructure-security" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All inter-service communication over HTTPS (TLS 1.3).</li>
+<li>Internal services (Node → Python) on private network — not exposed to public internet.</li>
+<li>Postgres: SSL required, connection pooling (PgBouncer/Supabase pooler), never publicly accessible.</li>
+<li>Redis: password-authenticated, private network only.</li>
+<li>S3/R2: private bucket; no public access; pre-signed URLs for temporary access (15-min expiry).</li>
+<li>Dependency scanning: automated via <code>npm audit</code> + <code>pip-audit</code> in CI.</li>
+<li>SAST: CodeQL on PRs to main.</li>
+</ul>
+<hr />
+<h2 id="9-incident-response-security">9. Incident Response (Security)<a class="headerlink" href="#9-incident-response-security" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Detect</strong> — monitoring alert OR user report</li>
+<li><strong>Contain</strong> — rotate compromised credentials immediately; if DB breach suspected, revoke all tokens</li>
+<li><strong>Assess</strong> — determine scope (which workspaces, what data)</li>
+<li><strong>Notify</strong> — affected customers within 72 hours (GDPR requirement)</li>
+<li><strong>Remediate</strong> — patch vulnerability, re-audit affected area</li>
+<li><strong>Post-mortem</strong> — blameless review; update runbook</li>
+</ol>
+<p>Contact: security@aivisibility.app</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/adityasingh7402" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
