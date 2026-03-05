@@ -2,12 +2,16 @@
 
 **Version:** 1.0  
 **Status:** MVP Active  
-**Owner:** Aditya Singh  
+**Document Owner:** Aditya Singh  
 **Last Updated:** 2026-02-27
+
+> **Team:** Aditya Singh (project lead, UI/API scope) · Indranil (UX persona input) · Pawan (AI/scoring scope) — see [CONTRIBUTORS.md](./CONTRIBUTORS.md)
 
 ---
 
 ## 1. Problem Statement
+
+> **Owner:** Aditya Singh
 
 Traditional SEO tracks ranking on Google's blue-link results. But a rapidly growing share of search intent is now served by AI assistants — ChatGPT, Gemini, Perplexity — which synthesise answers from training data and live retrieval without showing a traditional SERP. Brands have **zero visibility** into whether they are mentioned, how positively, and how often, in those AI-generated answers.
 
@@ -22,6 +26,8 @@ There is no widely-available, automated tool that:
 
 ## 2. Target Users
 
+> **Owner:** Aditya Singh (product) · Indranil (UX persona definitions)
+
 | User | Context |
 |---|---|
 | **Growth / Brand Marketer** | Manages brand across channels, reports to CMO, wants a dashboard number ("our AI SOV is 34%") |
@@ -32,6 +38,8 @@ There is no widely-available, automated tool that:
 ---
 
 ## 3. MVP Scope (Shipped)
+
+> **Owner:** Aditya Singh (dashboard, API, infra items) · Pawan (AI/scoring/extraction items)
 
 ### In-Scope
 
@@ -62,6 +70,8 @@ There is no widely-available, automated tool that:
 
 ## 4. Success Metrics
 
+> **Owner:** Aditya Singh (run latency, data freshness, cost per run) · Pawan (SOV accuracy, Top-1 rate, extraction F1)
+
 | Metric | Definition | MVP Target |
 |---|---|---|
 | **Share of Voice (SOV)** | % of prompt responses in which brand is mentioned | Accurately measured ± 3% |
@@ -74,6 +84,8 @@ There is no widely-available, automated tool that:
 ---
 
 ## 5. Milestones
+
+> **Owner:** Aditya Singh (project lead — milestone tracking)
 
 | Milestone | Target | Status |
 |---|---|---|

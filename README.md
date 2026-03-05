@@ -36,8 +36,21 @@ AI Visibility SaaS is a multi-tenant platform that lets marketing teams, SEO pro
 | [SECURITY_PRIVACY_COMPLIANCE.md](./SECURITY_PRIVACY_COMPLIANCE.md) | Data retention, PII, tenant isolation |
 | [OPS_RUNBOOK.md](./OPS_RUNBOOK.md) | Deployment, env vars, monitoring, incident response |
 | [DECISIONS.md](./DECISIONS.md) | Architecture Decision Records (ADR-lite) |
+| [CONTRIBUTORS.md](./CONTRIBUTORS.md) | Team roles, codebase ownership, doc ownership map |
+
+## Team
+
+> **Owner:** Aditya Singh (project lead) — see [CONTRIBUTORS.md](./CONTRIBUTORS.md) for full team ownership map.
+
+| Developer | Role |
+|---|---|
+| **Aditya Singh** | Full-Stack Engineer & Project Lead — dashboard, API, infra |
+| **Indranil** | Frontend Designer & Marketing Engineer — design system, UI, marketing |
+| **Pawan** | AI/ML Engineer — Python service, LLMs, scoring, gap analysis |
 
 ## Tech Stack (TL;DR)
+
+> **Owner:** Aditya Singh (Next.js + Node.js) · Indranil (Next.js UI/design) · Pawan (Python LLM Service)
 
 ```
 Next.js (UI)  →  Node.js API/Orchestration  →  Python LLM Service (Pawan)
@@ -68,4 +81,4 @@ See [OPS_RUNBOOK.md](./OPS_RUNBOOK.md) for full environment variable reference a
 
 ---
 
-*Last updated: 2026-02-27*
+*Last updated: 2026-03-05*
