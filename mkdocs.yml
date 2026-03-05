@@ -7,8 +7,6 @@ repo_url: https://github.com/adityasingh7402/AI-Visibility-SaaS
 repo_name: adityasingh7402/AI-Visibility-SaaS
 edit_uri: edit/main/
 
-docs_dir: '.'
-
 theme:
   name: material
   palette:
@@ -46,7 +44,7 @@ extra:
       link: https://github.com/adityasingh7402
 
 nav:
-  - Home: README.md
+  - Home: index.md
   - Product (PRD): PRD.md
   - Architecture: ARCHITECTURE.md
   - API Contracts: API_CONTRACTS.md
