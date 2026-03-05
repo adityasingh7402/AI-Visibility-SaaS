@@ -45,16 +45,16 @@ extra:
 
 nav:
   - Home: index.md
-  - Product (PRD): PRD.md
+  - PRD: PRD.md
   - Architecture: ARCHITECTURE.md
   - API Contracts: API_CONTRACTS.md
   - Data Model: DATA_MODEL.md
   - Prompting & Evals: PROMPTING_EVALS.md
-  - Model Provider Notes: MODEL_PROVIDER_NOTES.md
-  - Security & Compliance: SECURITY_PRIVACY_COMPLIANCE.md
+  - AI Providers: MODEL_PROVIDER_NOTES.md
+  - Security: SECURITY_PRIVACY_COMPLIANCE.md
   - Ops Runbook: OPS_RUNBOOK.md
-  - Decisions (ADRs): DECISIONS.md
-  - Team & Contributors: CONTRIBUTORS.md
+  - Decisions: DECISIONS.md
+  - Team: CONTRIBUTORS.md
 
 plugins:
   - search:
