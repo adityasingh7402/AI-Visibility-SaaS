@@ -2,6 +2,8 @@
 
 A running log of architectural and product decisions with date, context, and rationale. New decisions are appended at the bottom.
 
+> **Document Owner:** Aditya Singh · **AI/scoring ADRs:** Pawan — see [CONTRIBUTORS.md](./CONTRIBUTORS.md)
+
 ---
 
 ## Decision Log
@@ -11,7 +13,8 @@ A running log of architectural and product decisions with date, context, and rat
 ### ADR-001 · Store Raw LLM Responses?
 
 **Date:** 2026-02-20  
-**Status:** ✅ Accepted
+**Status:** ✅ Accepted  
+**Owner:** Aditya Singh + Pawan
 
 **Context:**  
 LLM responses are the source of truth for scoring. If we only store scores, we lose the ability to:
@@ -35,7 +38,8 @@ Re-scoring without raw data is impossible. Storage cost is negligible (~$0.015/G
 ### ADR-002 · MongoDB vs. Postgres+Vector for Fragments
 
 **Date:** 2026-02-20  
-**Status:** ✅ Accepted (Postgres Primary, MongoDB Optional)
+**Status:** ✅ Accepted (Postgres Primary, MongoDB Optional)  
+**Owner:** Aditya Singh + Pawan
 
 **Context:**  
 Raw LLM responses are semi-structured. We evaluated:
@@ -61,7 +65,8 @@ Use Postgres as the primary store (JSONB for scores, TEXT for response body). Mo
 ### ADR-003 · Python Pushes Results vs. Node Pulls
 
 **Date:** 2026-02-21  
-**Status:** ✅ Accepted (Python Pushes)
+**Status:** ✅ Accepted (Python Pushes)  
+**Owner:** Aditya Singh (Node callback) + Pawan (Python push logic)
 
 **Context:**  
 Two patterns considered for delivering LLM run results from Python service to Node:
@@ -87,7 +92,8 @@ Python **pushes** results via HTTP POST to Node's internal callback endpoint whe
 ### ADR-004 · Multi-Tenancy Strategy: Row-Level Isolation
 
 **Date:** 2026-02-21  
-**Status:** ✅ Accepted
+**Status:** ✅ Accepted  
+**Owner:** Aditya Singh
 
 **Context:**  
 Options for multi-tenant data isolation:
@@ -114,7 +120,8 @@ Row-level isolation (Option C) with `workspace_id` enforced by Prisma middleware
 ### ADR-005 · Prompt Templating: Static Library vs. LLM-Generated Variants
 
 **Date:** 2026-02-22  
-**Status:** ✅ Accepted (Static Library + Stratified Sampling)
+**Status:** ✅ Accepted (Static Library + Stratified Sampling)  
+**Owner:** Pawan
 
 **Context:**  
 Two approaches to generating prompt variants:
@@ -140,7 +147,8 @@ Static template library with stratified sampling for MVP.
 ### ADR-006 · Auth: JWT vs. Session Tokens
 
 **Date:** 2026-02-22  
-**Status:** ✅ Accepted (JWT with Refresh Rotation)
+**Status:** ✅ Accepted (JWT with Refresh Rotation)  
+**Owner:** Aditya Singh
 
 **Context:**  
 Options for user authentication:
@@ -167,7 +175,8 @@ Option C: JWT with refresh token rotation.
 ### ADR-007 · Gap Analyzer: In-Process vs. Separate Endpoint
 
 **Date:** 2026-02-23  
-**Status:** ✅ Accepted (Separate Async Endpoint)
+**Status:** ✅ Accepted (Separate Async Endpoint)  
+**Owner:** Aditya Singh (API endpoint design) + Pawan (gap algorithm)
 
 **Context:**  
 Gap analysis could be:
@@ -192,7 +201,8 @@ Separate on-demand async endpoint (`POST /gap/run`).
 ### ADR-008 · Object Storage: S3 vs. Cloudflare R2
 
 **Date:** 2026-02-24  
-**Status:** ✅ Accepted (Cloudflare R2)
+**Status:** ✅ Accepted (Cloudflare R2)  
+**Owner:** Aditya Singh
 
 **Context:**  
 Need object storage for raw LLM response blobs.

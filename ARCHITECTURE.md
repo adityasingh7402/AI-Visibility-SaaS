@@ -3,6 +3,8 @@
 **Version:** 1.0  
 **Last Updated:** 2026-02-27
 
+> **Document Owner:** Aditya Singh · **Section 2.3 Owner:** Pawan — see [CONTRIBUTORS.md](./CONTRIBUTORS.md)
+
 ---
 
 ## 1. High-Level System Diagram
@@ -23,7 +25,7 @@
 │  │  JWT     │  │ Routes   │  │  Queue   │  │   File Store  │  │
 │  └──────────┘  └────┬─────┘  └────┬─────┘  └───────┬───────┘  │
 │                     │              │                 │           │
-└─────────────────────┼──────────────┼─────────────────┼──────────┘
+└─────────────────────┬──────────────┬─────────────────┬──────────┘
                       │              │                 │
           ┌───────────┘   HTTP/gRPC  │                 │
           │              ┌───────────┘                 │
@@ -57,6 +59,8 @@
 
 ### 2.1 Next.js Frontend (`apps/web`)
 
+> **Owner:** Aditya Singh (functionality, routing, data) · Indranil (design system, UI components, marketing pages)
+
 | Responsibility | Notes |
 |---|---|
 | Authentication UI | Login, signup, JWT token storage (httpOnly cookie) |
@@ -73,6 +77,8 @@
 
 ### 2.2 Node.js Service (`apps/api`)
 
+> **Owner:** Aditya Singh
+
 | Responsibility | Notes |
 |---|---|
 | **Auth & JWT** | Issue/validate JWT tokens, workspace-scoped claims |
@@ -88,7 +94,9 @@
 
 ---
 
-### 2.3 Python Service (`services/python`) — Owner: Pawan
+### 2.3 Python Service (`services/python`)
+
+> **Owner:** Pawan
 
 | Responsibility | Notes |
 |---|---|
@@ -106,6 +114,8 @@
 ---
 
 ## 3. Data Flow
+
+> **Owner:** Aditya Singh (steps 1–3, 5–6) · Pawan (step 4 — Python processing pipeline)
 
 ```
 1. USER enters keyword + competitors in UI
@@ -144,10 +154,12 @@
 
 ## 4. Deployment Topology (MVP)
 
+> **Owner:** Aditya Singh
+
 ```
 ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
 │  Vercel      │     │  Railway /   │     │  Railway /   │
-│  (Next.js)   │────▶│  Render      │────▶│  Render      │
+│  (Next.js)   │────►│  Render      │────►│  Render      │
 │              │     │  (Node API)  │     │  (Python Svc)│
 └──────────────┘     └──────┬───────┘     └──────────────┘
                             │
