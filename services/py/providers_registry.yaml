@@ -1,0 +1,68 @@
+# ============================================================
+# GEO Platform — Provider Registry
+# Customer-facing LLMs for Agent 3 visibility testing.
+# Adding a new model = add entry here + API key in .env
+# ============================================================
+
+providers:
+  chatgpt:
+    display_name: "ChatGPT"
+    company: "OpenAI"
+    litellm_prefix: "openai"
+    env_key: "OPENAI_API_KEY"
+    available_models:
+      - id: "gpt-4o"
+        name: "GPT-4o"
+        is_default: true
+      - id: "gpt-4o-mini"
+        name: "GPT-4o Mini"
+      - id: "gpt-5"
+        name: "GPT-5 (Premium)"
+
+  gemini:
+    display_name: "Google Gemini"
+    company: "Google"
+    litellm_prefix: "gemini"
+    env_key: "GOOGLE_API_KEY"
+    available_models:
+      - id: "gemini-2.0-flash"
+        name: "Gemini 2.0 Flash"
+        is_default: true
+      - id: "gemini-2.0-pro"
+        name: "Gemini 2.0 Pro"
+
+  grok:
+    display_name: "Grok"
+    company: "xAI"
+    litellm_prefix: "xai"
+    env_key: "XAI_API_KEY"
+    available_models:
+      - id: "grok-3"
+        name: "Grok 3"
+        is_default: true
+      - id: "grok-3-mini"
+        name: "Grok 3 Mini"
+
+  claude:
+    display_name: "Claude"
+    company: "Anthropic"
+    litellm_prefix: "anthropic"
+    env_key: "ANTHROPIC_API_KEY"
+    available_models:
+      - id: "claude-sonnet-4-20250514"
+        name: "Claude Sonnet 4"
+        is_default: true
+      - id: "claude-3-5-haiku-20241022"
+        name: "Claude 3.5 Haiku"
+
+  perplexity:
+    display_name: "Perplexity"
+    company: "Perplexity AI"
+    litellm_prefix: "perplexity"
+    env_key: "PERPLEXITY_API_KEY"
+    available_models:
+      - id: "sonar-pro"
+        name: "Sonar Pro"
+        is_default: true
+      - id: "sonar"
+        name: "Sonar"

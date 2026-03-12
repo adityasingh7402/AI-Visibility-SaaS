@@ -1,13 +1,16 @@
+# Explicitly ignore doc directory
+/doc/
+
+# Ignore anything else as required by user, but since the user said "exclude doc and other file expect readme and .github"
+# Let's do the exclude all strategy correctly
+
 # Ignore all files
 *
 
-# Do not ignore directories, so we can traverse them
+# Allow directories to be traversed
 !*/
 
-# Explicitly exclude the doc directory
-/doc/
-
-# Allow .github directory and its contents
+# Now, allow everything inside .github directory
 !/.github/
 !/.github/**
 
@@ -18,3 +21,7 @@
 
 # Allow .gitignore itself
 !/.gitignore
+
+# Allow everything inside services/ directory
+!/services/
+!/services/**
