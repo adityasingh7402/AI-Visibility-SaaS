@@ -1,0 +1,20 @@
+# Ignore all files
+*
+
+# Do not ignore directories, so we can traverse them
+!*/
+
+# Explicitly exclude the doc directory
+/doc/
+
+# Allow .github directory and its contents
+!/.github/
+!/.github/**
+
+# Allow README files in root
+!/README.md
+!/readme.md
+!/Readme.md
+
+# Allow .gitignore itself
+!/.gitignore
